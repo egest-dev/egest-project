@@ -7,7 +7,7 @@
     <div class="all-button-box row d-flex justify-content-end">
         @can('create role')
             <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
-                <a href="#" data-url="{{ route('roles.create') }}" data-size="xl" data-ajax-popup="true" data-title="{{__('Create New Role')}}" class="btn btn-xs btn-white btn-icon-only width-auto">
+                <a href="#" data-url="{{ route('roles.create') }}" data-size="xl" data-ajax-popup="true" data-title="{{__('Create New Role')}}" class="btn btn-xs btn-white btn-icon-only width-auto" onclick="collapseSideNav()">
                     <i class="fa fa-plus"></i> {{__('Create')}}
                 </a>
             </div>
@@ -42,7 +42,7 @@
                                     <td class="Action">
                                         <span>
                                         @can('edit role')
-                                                <a href="#" class="edit-icon" data-url="{{ route('roles.edit',$role->id) }}" data-size="xl" data-ajax-popup="true" data-toggle="tooltip" data-original-title="{{__('Edit')}}" data-title="{{__('Edit Role')}}">
+                                                <a href="#" class="edit-icon" data-url="{{ route('roles.edit',$role->id) }}" data-size="xl" data-ajax-popup="true" data-toggle="tooltip" data-original-title="{{__('Edit')}}" data-title="{{__('Edit Role')}}" onclick="collapseSideNav()">
                                                 <i class="fas fa-pencil-alt"></i>
                                             </a>
                                             @endcan
@@ -64,4 +64,9 @@
             </div>
         </div>
     </div>
+    <script>
+        function collapseSideNav() {
+            if($('body').hasClass('sidenav-pinned')) {$('#sidenav-toggle').click();}
+        }
+    </script>
 @endsection

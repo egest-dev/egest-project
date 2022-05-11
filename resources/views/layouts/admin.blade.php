@@ -86,7 +86,7 @@
         <div class="modal-content">
             <div>
                 <h4 class="h4 font-weight-400 float-left modal-title" id="exampleModalLabel"></h4>
-                <a href="#" class="more-text widget-text float-right close-icon" data-dismiss="modal" aria-label="Close">{{__('Close')}}</a>
+                <!-- <a href="#" class="more-text widget-text float-right close-icon" data-dismiss="modal" aria-label="Close">{{__('Close')}}</a> -->
             </div>
             <div class="modal-body">
             </div>
@@ -137,6 +137,7 @@
 <script src="{{ asset('assets/js/custom.js') }} "></script>
 @if(Utility::getValByName('gdpr_cookie') == 'on')
     <script type="text/javascript">
+        
 
         var defaults = {
             'messageLocales': {
