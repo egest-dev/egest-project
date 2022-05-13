@@ -1,6 +1,6 @@
 @php
     $users=\Auth::user();
-    $profile=asset(Storage::url('uploads/avatar/'));
+    $profile=asset(Storage::url('uploads/avatar'));
     //$currantLang = $users->currentLanguage();
     $languages=\App\Models\Utility::languages();
     $lang = !is_null(\Cookie::get('lang')) ? \Cookie::get('lang') : 'en';
@@ -17,7 +17,7 @@
             <ul class="navbar-nav flex-row align-items-center">
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin" data-target="#sidenav-main"><i class="fas fa-bars"></i></a>
+                    <a href="#" id="sidenav-toggle" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin" data-target="#sidenav-main"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item">
                     <div class="dropdown global-icon" data-toggle="tooltip" data-original-titla="{{__('Choose Language')}}">
