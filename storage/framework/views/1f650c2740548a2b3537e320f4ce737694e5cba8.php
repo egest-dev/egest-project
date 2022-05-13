@@ -1,6 +1,6 @@
 <?php
     $users=\Auth::user();
-    $profile=asset(Storage::url('uploads/'));
+    $profile=asset(Storage::url('uploads/avatar'));
     //$currantLang = $users->currentLanguage();
     $languages=\App\Models\Utility::languages();
     $lang = !is_null(\Cookie::get('lang')) ? \Cookie::get('lang') : 'en';
