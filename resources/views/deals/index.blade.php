@@ -90,7 +90,7 @@
         @can('create deal')
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-12">
                 <div class="all-button-box">
-                    <a href="#" data-url="{{ route('deals.create') }}" data-ajax-popup="true" data-size="lg" data-title="{{__('Create Deal')}}" class="btn btn-xs btn-white btn-icon-only width-auto"><i class="fas fa-plus"></i> {{__('Create')}}</a>
+                    <a href="#" data-url="{{ route('deals.create') }}" data-ajax-popup="true" data-size="lg" data-title="{{__('Create Deal')}}" class="btn btn-xs btn-white btn-icon-only width-auto" onclick="collapseSideNav()"><i class="fas fa-plus"></i> {{__('Create')}}</a>
                 </div>
             </div>
         @endcan
@@ -164,8 +164,8 @@
                                                             <a href="#" class="action-item" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-h"></i></a>
                                                             <div class="dropdown-menu dropdown-menu-right">
                                                                 @can('edit deal')
-                                                                    <a href="#" data-url="{{ URL::to('deals/'.$deal->id.'/labels') }}" data-ajax-popup="true" data-title="{{__('Labels')}}" class="dropdown-item">{{__('Labels')}}</a>
-                                                                    <a href="#" data-url="{{ URL::to('deals/'.$deal->id.'/edit') }}" data-size="lg" data-ajax-popup="true" data-title="{{__('Edit Deal')}}" class="dropdown-item">{{__('Edit')}}</a>
+                                                                    <a  href="#" data-url="{{ URL::to('deals/'.$deal->id.'/labels') }}" data-ajax-popup="true" data-title="{{__('Labels')}}" onclick="collapseSideNav()" class="dropdown-item">{{__('Labels')}}</a>
+                                                                    <a href="#" data-url="{{ URL::to('deals/'.$deal->id.'/edit') }}" data-size="lg" data-ajax-popup="true" data-title="{{__('Edit Deal')}}" onclick="collapseSideNav()" class="dropdown-item">{{__('Edit')}}</a>
                                                                 @endcan
                                                                 @can('delete deal')
                                                                     <a href="#" data-title="{{__('Delete Deal')}}" class="dropdown-item" data-confirm="{{__('Are You Sure?').'|'.__('This action can not be undone. Do you want to continue?')}}" data-confirm-yes="document.getElementById('delete-form-{{$deal->id}}').submit();">{{__('Delete')}}</a>
@@ -212,5 +212,10 @@
                 </div>
             </div>
         </div>
+        <script>
+        function collapseSideNav() {
+            if($('body').hasClass('sidenav-pinned')) {$('#sidenav-toggle').click();}
+        }
+        </script>
     @endif
 @endsection

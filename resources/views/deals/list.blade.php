@@ -33,7 +33,7 @@
         @can('create deal')
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12 col-12">
                 <div class="all-button-box">
-                    <a href="#" data-url="{{ route('deals.create') }}" data-ajax-popup="true" data-size="lg" data-title="{{__('Create Deal')}}" class="btn btn-xs btn-white btn-icon-only width-auto"><i class="fas fa-plus"></i> {{__('Create')}}</a>
+                    <a href="#" data-url="{{ route('deals.create') }}" data-ajax-popup="true" data-size="lg" data-title="{{__('Create Deal')}}" class="btn btn-xs btn-white btn-icon-only width-auto" onclick="collapseSideNav()"><i class="fas fa-plus"></i> {{__('Create')}}</a>
                 </div>
             </div>
         @endcan
