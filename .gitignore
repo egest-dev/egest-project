@@ -5,6 +5,7 @@
 /storage/framework/views
 /storage/framework/cache
 /storage/debugbar
+/storage/logs
 /vendor
 .env
 .env.backup

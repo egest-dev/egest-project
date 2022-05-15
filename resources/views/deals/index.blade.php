@@ -212,10 +212,10 @@
                 </div>
             </div>
         </div>
+    @endif
         <script>
         function collapseSideNav() {
             if($('body').hasClass('sidenav-pinned')) {$('#sidenav-toggle').click();}
         }
         </script>
-    @endif
 @endsection

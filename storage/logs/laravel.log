@@ -3403,3 +3403,4 @@
 #35 /home/egestma/public_html/index.php(21): require_once('/home/egestma/p...')
 #36 {main}
 "} 
+[2022-05-15 11:34:10] local.ERROR: Debugbar exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'egest.sessions' doesn't exist (SQL: select * from `sessions` where `id` = Iduk0VMF3is4x4upZy031cJqRRRGBeGo9xd8A5ka limit 1)  
